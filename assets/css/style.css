@@ -38,4 +38,27 @@ body {
     grid-gap: 10px;
     margin: 50px;
     justify-content: center;
+    perspective: 500px;
+}
+
+.game-card {
+    position: relative;
+}
+
+.game-card:hover .back-face{
+    transform: rotateY(-180);
+}
+
+.game-card:hover .front-face{
+    transform: rotateY(0);
+}
+
+.front-face {
+    position: absolute;
+    transform: rotateY(180deg); 
+}
+
+.front-face, .back-face {
+    -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
 }
