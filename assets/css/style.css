@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Shadows+Into+Light&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    background: yellow;
+}
+
+.game-title {
+    font-family: 'Merienda One', sans-serif; 
+    text-align:center;
+    color: red;
+}
+
+.time-flips-container {
+    grid-column: 1/ -1;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.time-flips {
+    font-family: 'Shadows Into Light', sans-serif;
+    color: red;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+}
