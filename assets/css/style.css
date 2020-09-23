@@ -27,6 +27,7 @@ body {
     font-size: 25px;
 }
 
+
 .time-flips {
     font-family: 'Shadows Into Light', sans-serif;
     color: red;
@@ -38,19 +39,19 @@ body {
     grid-gap: 10px;
     margin: 50px;
     justify-content: center;
-    perspective: 500px;
+    perspective: 1000px;
 }
 
 .game-card {
     position: relative;
+    transform-style:preserve-3d;
+    transition: transform 0.8s;
+    border: 2px solid black;
 }
 
-.game-card:hover .back-face{
-    transform: rotateY(-180);
-}
-
-.game-card:hover .front-face{
-    transform: rotateY(0);
+.game-card.flip {
+    transform: rotateY(180deg);
+    border: 2px solid white;
 }
 
 .front-face {
@@ -62,3 +63,6 @@ body {
     -webkit-backface-visibility: hidden; 
   backface-visibility: hidden;
 }
+
+
+
