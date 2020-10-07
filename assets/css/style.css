@@ -10,13 +10,14 @@ html {
 
 body {
     margin: 0;
-    background: yellow;
+    background: #b5922a;
 }
 
 .game-title {
     font-family: 'Merienda One', sans-serif; 
     text-align:center;
-    color: red;
+    color:#c1b30a;
+    margin: 10px;
 }
 
 .time-flips-container {
@@ -63,6 +64,50 @@ body {
     -webkit-backface-visibility: hidden; 
   backface-visibility: hidden;
 }
+
+.welcome-text {
+    font-family: 'Merienda One', sans-serif; 
+    text-align:center;
+}
+
+.let-text {
+    font-family: 'Merienda One', sans-serif; 
+    text-align:center;
+}
+
+.level-text {
+    font-family: 'Merienda One', sans-serif; 
+    text-align:center;
+}
+
+.game-level {
+    display: inline-flex;
+}
+
+
+.level-easy,
+.level-medium,
+.level-hard {
+    display: inline-block;
+    text-align: center;
+    margin: 10px 60px 10px 40px;
+    width: 150px;
+    height: 100px;
+    border: 1px solid yellow;
+}
+
+.instruction {
+    margin:10px;
+    text-align: center;
+    font-size: 15px; 
+}
+
+.instruction li {
+   margin:10px;  
+}
+
+
+
 
 
 
