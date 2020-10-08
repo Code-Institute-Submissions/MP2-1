@@ -10,14 +10,14 @@ html {
 
 body {
     margin: 0;
-    background: #b5922a;
+    background: #3e3314;
 }
 
 .game-title {
     font-family: 'Merienda One', sans-serif; 
     text-align:center;
     color:#c1b30a;
-    margin: 10px;
+    margin: 15px;
 }
 
 .time-flips-container {
@@ -31,18 +31,36 @@ body {
 
 .time-flips {
     font-family: 'Shadows Into Light', sans-serif;
-    color: red;
+    color:#ffc107;
+    font-size: 30px;
 }
 
-.game-container {
+.game-container-16 {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
-    margin: 50px;
+    margin: 25px;
     justify-content: center;
     perspective: 1000px;
 }
 
+.game-container-20 {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    margin: 25px;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.game-container-24 {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
+    margin: 25px;
+    justify-content: center;
+    perspective: 1000px;
+}
 .game-card {
     position: relative;
     transform-style:preserve-3d;
@@ -66,22 +84,30 @@ body {
 }
 
 .welcome-text {
+    margin: 35px;
     font-family: 'Merienda One', sans-serif; 
     text-align:center;
+    color: #ecc961;
 }
 
 .let-text {
     font-family: 'Merienda One', sans-serif; 
     text-align:center;
+    color: #d39e00;
+    margin-bottom:30px;
 }
 
 .level-text {
     font-family: 'Merienda One', sans-serif; 
     text-align:center;
+    color: #908143;
 }
 
 .game-level {
     display: inline-flex;
+}
+.level-wrapper {
+   text-align:center; 
 }
 
 
@@ -90,20 +116,31 @@ body {
 .level-hard {
     display: inline-block;
     text-align: center;
-    margin: 10px 60px 10px 40px;
+    margin: 10px 60px 10px 60px;
     width: 150px;
     height: 100px;
-    border: 1px solid yellow;
+    border: 1px solid #ffff009e;
+    background-color: #8a811ce0;
+    color: #716951;
+}
+
+.level-easy:hover,
+.level-medium:hover,
+.level-hard:hover {
+    border: 1px solid #fbfbb79e;
+    background-color: #6d682be0;
 }
 
 .instruction {
     margin:10px;
     text-align: center;
     font-size: 15px; 
+    color:#d4ad39;
 }
 
 .instruction li {
-   margin:10px;  
+   margin:10px; 
+   color:#d4ad39; 
 }
 
 
