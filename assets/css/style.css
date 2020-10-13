@@ -14,6 +14,7 @@ body {
     background: #3e3314;
 }
 
+/*-- Game Logo --*/
 .game-title {
     font-family: 'Merienda One', sans-serif; 
     text-align:center;
@@ -37,7 +38,7 @@ body {
     font-size: 30px;
 }
 
-/*--Every Index Style --*/
+/*--All 3 Index Style --*/
 .game-container-16 {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -88,18 +89,26 @@ body {
   backface-visibility: hidden;
 }
 
-/*--  --*/
+/*-- Front Text --*/
 .let-text {
     font-family: 'Merienda One', sans-serif; 
     text-align:center;
     color: #d39e00;
-    margin-bottom:30px;
+    margin-bottom: 20px;
 }
 
+/*-- Image --*/
+.image {
+    text-align: center;
+}
+
+/*-- Game Level Text And Opitons --*/
 .level-text {
     font-family: 'Merienda One', sans-serif; 
     text-align:center;
-    color: #908143;
+    color: #cea910;
+    margin: 10px;
+}
 }
 
 .game-level {
@@ -131,7 +140,7 @@ body {
     border: 1px solid #fbfbb79e;
     background-color: #6d682be0;
 }
-
+/*-- How To Play Text --*/
 .instruction {
     margin:10px;
     text-align: center;
@@ -144,6 +153,7 @@ body {
    color:#d4ad39; 
 }
 
+/*-- Overlay Text --*/
 .overlay-text {
   display: none;
   position: fixed;
@@ -179,7 +189,11 @@ body {
   }
 }
 
-
+/*-- Footer Text --*/
+.footer-text {
+    text-align: center;
+    color:#654c04;
+}
 
 
 
