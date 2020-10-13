@@ -13,56 +13,59 @@
 </head>
 
 <body>
-    <!---- Page Title ---->
-	<h1 class="game-title">Bulmastiff Memory Game</h1>
-    <h2 class="welcome-text">WELCOME<h2>
-    <h3 class="let-text">LET`S START A GAME<h3>
+	<!-- Page Title -->
     <div class="game-level-container">
-    <div class="level-wrapper">
-    <h3 class="level-text">CHOOSE GAME LEVEL<h3>
-    <div class="level-easy">
-    <a class="nav-link" href="index16.html" style="color:#464325e0; width:150px; height:100px">EASY</a>
+	<h1 class="game-title">Bullmastiff Memory Game</h1>
+	<h2 class="let-text">LET`S START A GAME</h2>
+		<section class="level-wrapper">
+			<h3 class="level-text">CHOOSE GAME LEVEL</h3>
+				<div class="level-easy">
+				    <a class="nav-link" href="index16.html" style="color:#d0c323e0; width:150px; height:100px">EASY</a>
+				</div>
+				<div class="level-medium">
+				    <a class="nav-link" href="index20.html" style="color:#d0c323e0; width:150px; height:100px">MEDIUM</a>
+				</div>
+				<div class="level-hard">
+                    <a class="nav-link" href="index24.html" style="color:#d0c323e0; width:150px; height:100px">HARD</a>
+				</div>
+		</section>
+		<section class="instruction">
+			<h4>How to Play</h4>
+				<ol class="collapse" id="instruction">
+					<li>
+						Select a difficulty level to start the game.
+					</li>
+					<li>
+						Select two tiles. <br />
+                        If the two tiles match, they will not flipped back and stay on the board. <br />
+                        If they don't, they will be flipped back.
+                    </li>
+					<li>
+						Repeat Step 3 until the all cards match.
+					</li>
+					<li>
+						During a game, you can click "Restart" at any time to restart the game with the same
+						difficulty level.
+					</li>
+					<li>
+						After a game is completed, clicking "Back" will take you back to game level
+						selection.
+					</li>
+				</ol>
+		</section>
     </div>
-    <div class="level-medium">
-    <a class="nav-link" href="index20.html" style="color:#464325e0; width:150px; height:100px">MEDIUM</a>
-    </div>
-    <div class="level-hard">
-     <a class="nav-link" href="index24.html" style="color:#464325e0; width:150px; height:100px">HARD</a>
-    </div>
-    </div>
-    </div>
-    <div class="instruction">
-    <h4>How to Play</h4>
-    <ol class="collapse" id="instruction">
-            <li>
-                Select a difficulty level to start the game. 
-            </li>
-            <li>
-                Select two tiles. <br />
-                If the two tiles match, they will not flipped back and stay on the board. <br />
-                If they don't, they will be flipped back.
-            </li>
-            <li>
-                Repeat Step 3 until the all cards match.
-            </li>
-            <li>
-                During a game, you can click "Restart" at any time to restart the game with the same difficulty level. 
-            </li>
-            <li>
-                After a game is completed, clicking "Play again" will take you back to game level selection. 
-            </li>
-        </ol>
-    </div>  
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous">
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous">
 	</script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous">
 	</script>
 	<script src="assets/js/main.js"></script>
 </body>
