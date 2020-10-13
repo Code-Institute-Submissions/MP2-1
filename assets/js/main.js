@@ -1,4 +1,4 @@
-function ready(){
+function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('game-card'));
     let game = new Display(100, cards);
@@ -22,7 +22,7 @@ function ready(){
         });
     });
 
-    
+  
     $('#game-over-text, #victory-text').click(function () {
         location.reload();
     }); 
@@ -50,8 +50,7 @@ function flipCard() {
 function checkForMatch(){
 let isMatch = firstCard.dataset.card === secondCard.dataset.card;         
     
-    isMatch ? disableCards() : unflipCards()
-    return this.victory;
+    isMatch ? disableCards() : unflipCards();
         
 }
 
@@ -70,7 +69,7 @@ setTimeout(() => {
     secondCard.classList.remove('flip');
 
     resetBoard();
-    }, 1200); 
+    }, 800); 
 }
 
 

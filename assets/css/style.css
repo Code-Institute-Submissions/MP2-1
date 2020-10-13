@@ -21,6 +21,7 @@ body {
     margin: 15px;
 }
 
+/*-- Game Info --*/
 .time-flips-container {
     grid-column: 1/ -1;
     display: flex;
@@ -36,6 +37,7 @@ body {
     font-size: 30px;
 }
 
+/*--Every Index Style --*/
 .game-container-16 {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -62,6 +64,8 @@ body {
     justify-content: center;
     perspective: 1000px;
 }
+
+/*-- Card Flip --*/
 .game-card {
     position: relative;
     transform-style:preserve-3d;
@@ -84,14 +88,7 @@ body {
   backface-visibility: hidden;
 }
 
-
-.welcome-text {
-    margin: 35px;
-    font-family: 'Merienda One', sans-serif; 
-    text-align:center;
-    color: #ecc961;
-}
-
+/*--  --*/
 .let-text {
     font-family: 'Merienda One', sans-serif; 
     text-align:center;
@@ -108,8 +105,9 @@ body {
 .game-level {
     display: inline-flex;
 }
+
 .level-wrapper {
-   text-align:center; 
+    text-align: center; 
 }
 
 
@@ -118,6 +116,7 @@ body {
 .level-hard {
     display: inline-block;
     text-align: center;
+    font-size: 25px;
     margin: 10px 60px 10px 60px;
     width: 150px;
     height: 100px;
