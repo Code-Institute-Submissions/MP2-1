@@ -51,6 +51,8 @@ function checkForMatch(){
 let isMatch = firstCard.dataset.card === secondCard.dataset.card;         
     
     isMatch ? disableCards() : unflipCards();
+
+    return this.victory();
         
 }
 
@@ -123,6 +125,16 @@ class AudioController {
         this.stopMusic();
         this.gameOverSound.play();
     }
+
+    on() {
+        this.startMusic();
+        document.getElementById('on').addEventListener('click');
+    }
+
+    off() {
+        this.stopMusic();
+        document.getElementById('off').addEventListener('click');
+    }
 }
 
 class Display {
@@ -172,7 +184,7 @@ class Display {
     victory() {
         clearInterval(this.countDown);
         this.audioController.victory();
-         document.getElementById('victory-text').classList.add('visible');         
+        document.getElementById('victory-text').classList.add('visible');         
         }
 }
 
