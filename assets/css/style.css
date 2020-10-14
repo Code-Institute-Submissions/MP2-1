@@ -76,7 +76,7 @@ body {
     perspective: 1000px;
 }
 
-/*-- Card Flip --*/
+/*-- Card and Card Flip --*/
 .game-card {
     position: relative;
     transform-style:preserve-3d;
@@ -179,7 +179,7 @@ body {
 }
 
 .overlay-text-small {
-  font-size: .3em;
+  font-size: 25px;
 }
 
 .overlay-text.visible {
@@ -195,7 +195,7 @@ body {
   }
   to {
     background-color: rgba(0, 0, 0, .8);
-    font-size: 5em;
+    font-size: 80px;
   }
 }
 
@@ -203,6 +203,98 @@ body {
 .footer-text {
     text-align: center;
     color:#654c04;
+}
+
+@media only screen and (max-width: 700px) {
+.game-container-16, 
+.game-container-20,
+.game-container-24 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 3px;
+    }
+
+.game-title {
+      font-size: 20px;
+      margin: 5px;
+    }
+
+.audio-toggle {
+      font-size: 10px;
+    }
+
+.time-flips {
+      font-size: 15px;
+    }
+
+.btn {
+      font-size: 8px;
+    }
+
+.overlay-text {
+     justify-content: flex-start;
+     margin: -20px;
+}
+
+.image img {
+  max-width: 80%;
+}
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 40px;
+  }
+}
+
+.level-text {
+   font-size: 20px;
+   margin-top: 20px;
+ }
+
+.let-text {
+   font-size: 20px;
+   margin-top: 20px;
+}
+}
+@media only screen and (min-width: 576px) {
+.game-container-16, 
+.game-container-20,
+.game-container-24 {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 3px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+.game-container-20,
+.game-container-24 {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 5px;
+    }
+
+.overlay-text {
+     margin: -20px;
+}
+}
+
+@media only screen and (min-width: 992px) {
+.game-container-20 {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 3px;
+    }
+
+.game-container-24 {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 3px;
+    }
 }
 
 

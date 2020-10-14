@@ -51,9 +51,6 @@ function checkForMatch(){
 let isMatch = firstCard.dataset.card === secondCard.dataset.card;         
     
     isMatch ? disableCards() : unflipCards();
-
-    return this.victory();
-        
 }
 
 function disableCards() {
