@@ -2,8 +2,7 @@ function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('game-card'));
     let game = new Display(100, cards);
-    let audioController = new AudioController();
-        audioController.startMusic(); 
+    
     let hasFlippedCard = false;
     let lockBoard = false;
     let firstCard;
@@ -93,7 +92,7 @@ class AudioController {
     constructor(){
         this.bgMusic = new Audio('assets/audio/music.mp3');
         this.clickSound = new Audio('assets/audio/Click1.mp3')
-        this.bgMusic.volume = 0,5;
+        this.bgMusic.volume = 0.3;
         this.bgMusic.loop = true;
         this.victorySound = new Audio('assets/audio/Victory1.wav');
         this.gameOverSound = new Audio('assets/audio/GameOver.wav');
@@ -116,8 +115,7 @@ class AudioController {
         this.stopMusic();
         this.victorySound.play();
     }
-
-
+    
     gameOver() {
         this.stopMusic();
         this.gameOverSound.play();
@@ -170,6 +168,11 @@ class Display {
             if(this.timeRemaining === 0)
                 this.gameOver();
         }, 1000);
+    }
+
+    cardMatch() {
+        if(this.ifMatch.length === this.cardsArray.length)
+            this.victory();
     }
 
     gameOver() {
