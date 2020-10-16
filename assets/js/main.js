@@ -1,32 +1,9 @@
-function ready() {
-    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-    let cards = Array.from(document.getElementsByClassName('game-card'));
-    let game = new Display(100, cards);
-    
-    let hasFlippedCard = false;
-    let lockBoard = false;
-    let firstCard;
-    let secondCard;
+const cards = document.querySelectorAll('.game-card');
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard;
+let secondCard;
 
-     overlays.forEach(overlay => {
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('visible');
-            game.startGame();
-        });
-    });        
-
-    cards.forEach(card =>{
-        card.addEventListener('click', () => {
-            game.flipCount();
-        });
-    });
-
-  
-    $('#game-over-text, #victory-text').click(function () {
-        location.reload();
-    }); 
-
- 
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -45,9 +22,8 @@ function flipCard() {
     checkForMatch();
 }
 
-
 function checkForMatch(){
-let isMatch = firstCard.dataset.card === secondCard.dataset.card;         
+let isMatch = firstCard.dataset.card === secondCard.dataset.card;
     
     isMatch ? disableCards() : unflipCards();
 }
@@ -70,11 +46,11 @@ setTimeout(() => {
     }, 800); 
 }
 
-
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
+
 (function shuffle(){
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 24);
@@ -83,10 +59,8 @@ function resetBoard() {
 })();
 
 
-//Flips the cards on click
+//Flips the cards on click//
 cards.forEach(card => card.addEventListener('click', flipCard));
-
-}
 
 class AudioController {
     constructor(){
@@ -94,6 +68,7 @@ class AudioController {
         this.clickSound = new Audio('assets/audio/Click1.mp3')
         this.bgMusic.volume = 0.3;
         this.bgMusic.loop = true;
+        this.bgMusic.autoplay = false;
         this.victorySound = new Audio('assets/audio/Victory1.wav');
         this.gameOverSound = new Audio('assets/audio/GameOver.wav');
     }
@@ -115,20 +90,22 @@ class AudioController {
         this.stopMusic();
         this.victorySound.play();
     }
-    
+
     gameOver() {
         this.stopMusic();
         this.gameOverSound.play();
     }
 
     on() {
-        this.startMusic();
-        document.getElementById('on').addEventListener('click');
+        document.getElementById('on').addEventListener('click', () => {
+            this.bgMusic.play();
+        }); 
     }
 
     off() {
-        this.stopMusic();
-        document.getElementById('off').addEventListener('click');
+        document.getElementById('off').addEventListener('click', () => {
+            this.bgMusic.pause();
+        });
     }
 }
 
@@ -155,12 +132,12 @@ class Display {
         this.ticker.innerText = this.totalClicks;
     }
 
-    flipCount(){
+    flipCard() {
         this.audioController.flip();
         this.totalClicks++;
         this.ticker.innerText = this.totalClicks;
     }
-    
+
     startCountDown() {
          return setInterval(() => {
             this.timeRemaining--;
@@ -168,11 +145,6 @@ class Display {
             if(this.timeRemaining === 0)
                 this.gameOver();
         }, 1000);
-    }
-
-    cardMatch() {
-        if(this.ifMatch.length === this.cardsArray.length)
-            this.victory();
     }
 
     gameOver() {
@@ -184,13 +156,37 @@ class Display {
     victory() {
         clearInterval(this.countDown);
         this.audioController.victory();
-        document.getElementById('victory-text').classList.add('visible');         
-        }
+        document.getElementById('victory-text').classList.add('visible');
+    }
 }
 
+function ready(){
+    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+    let game = new Display(100, cards);
+    let reload = document.getElementById('game-over-text', 'victory-text')
 
+//Start, Win and Game Over Overlay text//   
+    overlays.forEach(overlay => {
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('visible');
+            game.startGame();
+        });
+    });
 
-//Opens game instructions
+//Add one move on click//
+    cards.forEach(card =>{
+        card.addEventListener('click', () => {
+            game.flipCard(card);
+        });
+    });
+
+//Reset Board after Win or Game Over//
+    reload.addEventListener('click', () => {
+        location.reload();
+    });
+}
+
+//Toggle game instructions//
 $(document).ready(function(){
   $(".instruction").click(function(){
     $("#instruction").collapse('toggle');
