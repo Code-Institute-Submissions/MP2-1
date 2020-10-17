@@ -94,14 +94,14 @@ body {
     border: 2px solid black;
 }
 
-.game-card.visible {
+.game-card.flip {
     transform: rotateY(180deg);
     border: 2px solid white;
 }
 
 .front-face {
     position: absolute;
-    transform: rotateY(0deg); 
+    transform: rotateY(180deg); 
 }
 
 .front-face, .back-face {
