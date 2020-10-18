@@ -129,7 +129,6 @@ body {
     color: #cea910;
     margin: 10px;
 }
-}
 
 .game-level {
     display: inline-flex;
@@ -160,6 +159,7 @@ body {
     border: 1px solid #fbfbb79e;
     background-color: #6d682be0;
 }
+
 /*-- How To Play Text --*/
 .instruction {
     margin:10px;
@@ -222,24 +222,24 @@ body {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-gap: 3px;
-    }
+}
 
 .game-title {
       font-size: 20px;
       margin: 5px;
-    }
+}
 
 .audio-toggle {
       font-size: 10px;
-    }
+}
 
 .time-flips {
       font-size: 15px;
-    }
+}
 
 .btn {
       font-size: 8px;
-    }
+}
 
 .overlay-text {
      justify-content: flex-start;
@@ -270,6 +270,7 @@ body {
    margin-top: 20px;
 }
 }
+
 @media only screen and (min-width: 576px) {
 .game-container-16, 
 .game-container-20,
@@ -286,7 +287,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 5px;
-    }
+}
 
 .overlay-text {
      margin: -20px;
@@ -298,7 +299,7 @@ body {
     display: grid;
     grid-template-columns: repeat(5, auto);
     grid-gap: 3px;
-    }
+}
 
 .game-container-24 {
     display: grid;

@@ -1,3 +1,30 @@
+function playBackgroundMusic() {
+        let bgMusic = new Audio('assets/audio/music.mp3');
+        let victorySound = new Audio('assets/audio/Victory1.wav');
+        let gameOverSound = new Audio('assets/audio/GameOver.wav');
+        bgMusic.play();
+        bgMusic.volume = 0.3;
+        bgMusic.loop = true;
+      
+
+        //Mutes background music on click
+        $('#on').click(function () {
+            $(bgMusic).each(function () {
+                $(bgMusic).prop('muted', false);
+            });
+            $('#off').removeClass("audio-status")
+            $(this).addClass("audio-status")
+        });
+        $('#off').click(function () {
+            $(bgMusic).each(function () {
+                $(bgMusic).prop('muted', true);
+            });
+            $('#on').removeClass("audio-status")
+            $(this).addClass("audio-status")
+        });
+    }
+
+
 const cards = document.querySelectorAll('.game-card');
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -71,7 +98,7 @@ function resetBoard() {
 
 const timer = document.querySelector("#time-remaining");
 let Timer,
-    totalSeconds = 5;
+    totalSeconds = 100;
 
 function startCountDown() {
     Timer = setInterval(() => {
@@ -104,28 +131,36 @@ function victory() {
     document.getElementById('victory-text').classList.add('visible');
 };
 
+let reload = document.getElementById('game-over-text', 'victory-text');
+
+ //Reset Board after Win or Game Over//
+    reload.addEventListener('click', () => {
+        location.reload();
+    });
+
+$(document).ready(function(){
+  $(".instruction").click(function(){
+    $("#instruction").add('visible').collapse('toggle');    
+    });
+});
+
+
+
 //Flips cards on click//
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-
-//Start, Win and Game Over Overlay text//   
+    
+ //Start, Win and Game Over Overlay text//   
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible');
             startCountDown();
+            playBackgroundMusic();
         });
     });
 };
-
-//Toggle game instructions//
-$(document).ready(function() {
-  $(".instruction").click(function() {
-    $("#instruction").collapse('toggle');
-    });
-});
-
 
 if(document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready());
