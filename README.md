@@ -14,7 +14,7 @@ The following user stories have been identified:
 3. As a user, I want to be able to choose a difficulty level.
 4. As a user, I want to be provided with instructions on how to play the game.
 5. As a user, I want to be able to restart the game without going back to the home page.
-6. As a user, I want to how quickly I finish the game.
+6. As a user, I want to how quickly they finished the game.
 
 ## Features
 
@@ -23,6 +23,7 @@ The following user stories have been identified:
 #### Home Page 
 
 1. Section "CHOOSE GAME LEVEL" were you can pick a level of difficulty. There ara three levels "EASY", "MEDIUM" and "HARD". All of them will take you to different page where you can start game after clicking on "CLICK TO PLAY" or "BACK TO CHOOSE GAME LEVEL" to come back and choose a different level.
+
 2. Section "How To Play" after click on the instructions will toggle.
 
 #### Game Page 
