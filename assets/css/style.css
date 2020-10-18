@@ -32,14 +32,16 @@ body {
   margin-top: 10px;
 }
 
-#on {
+#on,
+#off {
   color:#d39e00;
   background-color:#9c7c07;
 }
 
-#off {
-  color:#d39e00;
-  background-color:#9c7c07;
+#on:hover,
+#off:hover {
+  color:#e68321;
+  background-color:#d2aa1a;
 }
 
 /*-- Game Info --*/
