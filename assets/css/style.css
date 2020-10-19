@@ -6,8 +6,6 @@
 
 html {
     height: 100vh;
-    cursor: url("assets/img/cursors/cursor.cur"), auto;
-    
 }
 
 body {
@@ -52,7 +50,6 @@ body {
     margin: 10px;
     font-size: 25px;
 }
-
 
 .time-flips {
     font-family: 'Shadows Into Light', sans-serif;
@@ -307,7 +304,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, auto);
     grid-gap: 3px;
-    }
+}
 }
 
 

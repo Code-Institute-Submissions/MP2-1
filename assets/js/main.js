@@ -10,18 +10,17 @@ function playBackgroundMusic() {
             $(bgMusic).each(function () {
                 $(bgMusic).prop('muted', false);
             });
-            $('#off').removeClass("audio-status")
-            $(this).addClass("audio-status")
+            $('#off').removeClass("audio-status");
+            $(this).addClass("audio-status");
         });
         $('#off').click(function () {
             $(bgMusic).each(function () {
                 $(bgMusic).prop('muted', true);
             });
-            $('#on').removeClass("audio-status")
-            $(this).addClass("audio-status")
+            $('#on').removeClass("audio-status");
+            $(this).addClass("audio-status");
         });
     }
-
 
 const cards = document.querySelectorAll('.game-card');
 let hasFlippedCard = false;
@@ -112,7 +111,7 @@ function startCountDown() {
         if(totalSeconds === 0)
         gameOver();
     }, 1000);
-};
+}
 
 function stopTimer() {
     clearInterval(Timer);
@@ -121,10 +120,12 @@ function stopTimer() {
 //Add moves on game board//
 const moves = document.querySelector("#flips");
 let flips = 0;
-moves.innerHTML = 0;
 function addFlips() {
     flips++;
     moves.innerHTML = flips;
+}
+  if (moves != null) {
+    moves.innerHTML = 0;
 }
 
 let victorySound = new Audio('assets/audio/Victory1.wav');
@@ -134,13 +135,13 @@ function gameOver() {
     stopTimer();
     document.getElementById('game-over-text').classList.add('visible');
     gameOverSound.addEventListener(gameOverSound.play());
-};
+}
 
 function victory() {
     stopTimer();
     document.getElementById('victory-text').classList.add('visible');
     victorySound.add(victorySound.play());
-};
+}
 
 //Reset board after Win or Game Over//
 $('#game-over-text, #victory-text').click(function () {
@@ -167,7 +168,7 @@ function ready() {
             playBackgroundMusic();
         });
     });
-};
+}
 
 if(document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready());
