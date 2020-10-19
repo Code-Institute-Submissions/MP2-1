@@ -91,7 +91,7 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-//shuffle cards//
+//Shuffle cards//
 (function shuffle(){
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 24);
