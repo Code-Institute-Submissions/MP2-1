@@ -16,9 +16,16 @@ body {
 /*-- Game Logo --*/
 .game-title {
     font-family: 'Merienda One', sans-serif; 
-    text-align:center;
+    text-align: center;
     color:#c1b30a;
     margin: 15px 15px 15px 120px;
+}
+
+.game-title-home-page {
+    font-family: 'Merienda One', sans-serif; 
+    text-align:center;
+    color:#c1b30a;
+    margin: 15px;
 }
 
 /*-- Music ON/OFF --*/
@@ -88,7 +95,7 @@ body {
 /*-- Card and Card Flip --*/
 .game-card {
     position: relative;
-    transform-style:preserve-3d;
+    transform-style: preserve-3d;
     transition: transform 0.8s;
     border: 2px solid black;
 }
@@ -161,7 +168,7 @@ body {
 
 /*-- How To Play Text --*/
 .instruction {
-    margin:10px;
+    margin: 10px;
     text-align: center;
     font-size: 15px; 
     color:#d4ad39;
@@ -224,8 +231,13 @@ body {
 }
 
 .game-title {
-      font-size: 20px;
-      margin: 5px;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.game-title-home-page {
+    font-size: 23px;
+    margin: 5px;
 }
 
 .audio-toggle {
